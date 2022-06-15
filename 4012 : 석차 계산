@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct rank
+{
+	int score;
+	int rank;
+};
+int main()
+{
+	int n;
+	int count= 0;
+	struct rank s[200];
+	printf("처리할 점수의 개수 입력 :");
+	scanf("%d", &n);
+	printf("점수 입력 :");
+	for (int i = 0;i < n;i++)
+	{
+		scanf("%d", &s[i].score);
+	}
+	for (int i = 0;i < n;i++)
+	{
+		for (int j = 0;j < n;j++)
+		{
+			if (s[i].score < s[j].score)
+			{
+				count++;
+			}
+		}
+		s[i].rank = count + 1;
+		count = 0;
+	}
+	for (int i = 0;i < n;i++)
+	{
+		printf("%d %d\n", s[i].score, s[i].rank);
+	}
+	return 0;
+
+	
+}
