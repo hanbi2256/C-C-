@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+struct point
+{
+	int x;
+	 int y;
+};
+struct point get_sum(struct point pp1, struct point pp2)
+{
+	struct point result;
+	result.x = pp1.x + pp2.x;
+	result.y = pp1.y + pp2.y;
+	return result;
+}
+int main()
+{
+	struct point p1, p2;
+	struct point sum;
+
+	printf("p1좌표 입력:");
+	scanf("%d %d", &p1.x, &p1.y);
+	printf("p2좌표 입력:");
+	scanf("%d %d", &p2.x, &p2.y);
+	
+	 sum =  get_sum(p1, p2);
+	 printf("두 좌표의 합 %d %d\n", sum.x, sum.y);
+	 return 0;
+}
+	
