@@ -1,0 +1,27 @@
+//#include <stdio.h>
+//struct student
+//{
+//	int age;
+//	char name[20];
+//};
+//int compare(struct student ss1, struct student ss2)
+//{
+//	if (ss1.age==ss2.age) return  1;
+//	else return  0;
+//}
+//int main()
+//{
+//	struct student s1, s2;
+//	int result;
+//
+//	printf("이름:");
+//	scanf("%s %s", s1.name, s2.name);
+//	printf("나이:");
+//	scanf("%d %d", &s1.age, &s2.age);
+//	result = compare(s1, s2);
+//	if (result)
+//		printf("동갑\n");
+//	else
+//		printf("동갑아님\n");
+//	return  0;
+//}
