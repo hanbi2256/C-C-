@@ -1,0 +1,92 @@
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main()
+//{
+//	char* c;
+//	c = (char*)malloc(sizeof(char));//1)동정 메모리 할당
+//	if (c == NULL)
+//	{
+//		printf("메모리 할당 오류!");
+//		return 0;
+//	 }
+//	*c = 'm';//2)동적 메모리 사용
+//	printf("*c=%c\n", *c);
+//	free(c);//3)동적 메모리 반납
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int main()
+//{
+//	char* pc;
+//	pc = (char*)malloc(sizeof(char) * 3);
+//	if (pc == NULL)
+//	{
+//		printf("메모리 할당 오류!");
+//		return 0;
+//	}
+//	*pc = 'a';//첫 번재 주소에 a저장
+//	*(pc + 1) = 'b';
+//	*(pc + 2) = 'c';
+//	for (int i = 0;i < 3;i++)
+//	{
+//		printf("%c ", *(pc + i));
+//	}
+//	free(pc);
+//}
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	char* pc;
+//	pc = (char*)malloc(sizeof(char) * 100);
+//	int i = 0;
+//	if (pc == NULL)
+//	{
+//		printf("메모리 할당 오류!");
+//		return 0;
+//	}
+//	while (1)
+//	{
+//		scanf("%c", (pc + i));
+//		if (*(pc+i) == '!')
+//		{
+//			break;
+//		}
+//		i++;
+//	}
+//	for (int j = 0;j < i;j++)
+//	{
+//		printf("%c ", *(pc+j));
+//	}
+//	free(pc);
+//	return 0;
+//}
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int* pi;
+	pi = (int*)malloc(sizeof(int) * 5);
+
+	if (pi == NULL)
+	{
+		printf("메모리 할당 오류!");
+		return 0;
+	}
+	for (int i = 0;i < 5;i++)
+	{
+		scanf("%d", &pi[i]);
+	}
+	for (int i = 0;i < 5;i++)
+	{
+		printf("%d ", pi[i]);
+	}
+	free(pi);
+	return 0;
+	
+}
